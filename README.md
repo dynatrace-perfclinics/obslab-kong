@@ -27,6 +27,8 @@ To open ports, you need to do all of the following:
 
 You can alter anything from within the codespace. Git is already configured so the usual `git add someFile.txt && git commit -m "update" && git push` will work.
 
+> BE CAREFUL NOT TO COMMIT SENSITIVE DATA OR SECRETS BACK TO THE REPOSITORY!
+
 ## Making ports public
 
 Codespaces are private (to your user since you're logged in) by default. You can open up ports for collaboration:
