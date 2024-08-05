@@ -43,6 +43,21 @@ You can also do this programatically. For example, this command would set the vi
 gh codespace ports visibility --repo=$GITHUB_REPOSITORY 8080:public
 ```
 
+## Enable Problem Patterns
+
+The OpenTelemetry Demo app comes with problem patterns built in.
+
+To enable / disable:
+
+* Modify the `defaultValue` in `.devcontainer/otel-demo/flags.yaml` (usually from `off` to `on` or use one of the `variant` keys).
+* Apply the changes and restart flagd (for some reason the OTEL demo app chooses not to live reload) so a restart of the feature flag engine ([flagd](https://flagd.dev)) is necessary:
+
+```
+kubectl apply -f .devcontainer/otel-demo/flags.yaml
+kubectl scale deploy/my-otel-demo-flagd --replicas=0
+kubectl scale deploy/my-otel-demo-flagd --replicas=1
+```
+
 ## Cleanup
 
 Codespaces are charged when they're running (you have 2000 credits for free). Go to `https://github.com/codespaces` and delete the codespace to prevent charges.
