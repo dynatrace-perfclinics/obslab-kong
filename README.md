@@ -9,6 +9,7 @@ Click this to open the environment:
 * The environment is created based on the template in `.devcontainer/devcontainer.json`
 * As you may have spotted in `devcontainer.json`, when the container starts, `.devcontainer/post-start.sh` is executed (put your install logic here)
 * The OpenTelemetry demo is installed in the `default` namespace (pods usually take ~5mins to spin up)
+* Kong control plane and data plane are installed in the `kong` namespace.
 
 ### Creation Log
 
