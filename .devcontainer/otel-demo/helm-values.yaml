@@ -99,7 +99,7 @@ components:
     enabled: true
     envOverrides:
       - name: PUBLIC_OTEL_EXPORTER_OTLP_TRACES_ENDPOINT
-        value: https://scaling-guide-wvxxqr555xrhgxwx-8080.app.github.dev/otlp-http/v1/traces
+        value: https://CODESPACE_NAME_PLACEHOLDER-8080.GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN_PLACEHOLDER/otlp-http/v1/traces
   frontendProxy:
     enabled: true
   imageprovider:
