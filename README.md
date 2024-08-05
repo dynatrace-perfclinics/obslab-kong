@@ -22,3 +22,25 @@ To open ports, you need to do all of the following:
 * Open up the port into the codespace. Do this by specifying it in `.devcontainer/devcontainer.json`
 * Open the port to the kind cluster. Modify `.devcontainer/kind-cluster.yaml`
 * Rebuild the codespace: `View > Command Palette` and search for rebuild or just go to `https://github.com/codespaces` and delete the codespace. Then recreate.
+
+## Committing Changes
+
+You can alter anything from within the codespace. Git is already configured so the usual `git add someFile.txt && git commit -m "update" && git push` will work.
+
+## Making ports public
+
+Codespaces are private (to your user since you're logged in) by default. You can open up ports for collaboration:
+
+* Go to the ports tab
+* Right click the entry, choose `port visibility` and choose public
+* Right click the entry again and `copy local address` that URL is now public (but be careful who you share that with!)
+
+You can also do this programatically. For example, this command would set the visibility of port `8080` to `public`:
+
+```
+gh codespace ports visibility --repo=$GITHUB_REPOSITORY 8080:public
+```
+
+## Cleanup
+
+Codespaces are charged when they're running (you have 2000 credits for free). Go to `https://github.com/codespaces` and delete the codespace to prevent charges.
