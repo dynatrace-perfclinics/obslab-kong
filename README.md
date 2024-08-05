@@ -13,7 +13,7 @@ Click this to open the environment:
 
 ### Creation Log
 
-If things go wrong, go to `View > Command Palette` and search for `creation log`. This will show you anythign that goes wrong with `.devcontainer/post-start.sh`
+If things go wrong, go to `View > Command Palette` and search for `creation log`. This will show you anything that goes wrong with `.devcontainer/post-start.sh`
 
 ### Opening Ports
 
