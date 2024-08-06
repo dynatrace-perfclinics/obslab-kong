@@ -35,7 +35,7 @@ kubectl create secret generic dt-details --from-literal=DT_ENDPOINT_OBSLAB_KONG=
 #   Note: Data Ingest token only has metrics.ingest permission
 #     So re-use DT_API_TOKEN_OBSLAB_KONG instead of asking users for yet another token
 kubectl create namespace dynatrace
-kubectl create secret generic cluster-$CODESPACE_NAME --from-literal=apiToken=$DT_OPERATOR_TOKEN_OBSLAB_KONG --from-literal=dataIngestToken=$DT_API_TOKEN_OBSLAB_KONG
+kubectl -n dynatrace create secret generic $CODESPACE_NAME --from-literal=apiToken=$DT_OPERATOR_TOKEN_OBSLAB_KONG --from-literal=dataIngestToken=$DT_API_TOKEN_OBSLAB_KONG
 helm install dynatrace-operator oci://public.ecr.aws/dynatrace/dynatrace-operator --namespace dynatrace --atomic
 kubectl apply -f .devcontainer/dynatrace/dynakube.yaml
 

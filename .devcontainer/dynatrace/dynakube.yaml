@@ -2,7 +2,7 @@
 apiVersion: dynatrace.com/v1beta2
 kind: DynaKube
 metadata:
-  name: cluster-CODESPACE_NAME_PLACEHOLDER
+  name: CODESPACE_NAME_PLACEHOLDER
   namespace: dynatrace
   annotations:
     feature.dynatrace.com/k8s-app-enabled: "true"
