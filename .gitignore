@@ -1,2 +1,3 @@
 site/*
 .devcontainer/otel-demo/helm-values.yaml
+.devcontainer/otel-demo/dynakube.yaml

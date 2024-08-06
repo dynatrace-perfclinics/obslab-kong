@@ -53,6 +53,8 @@
 		},
 		  "DT_API_TOKEN_OBSLAB_KONG": {
 	    	    "description": "Dynatrace API token with these permissions: `metrics.ingest`, `logs.ingest`, `openTelemetryTrace.ingest`"
+		}, "DT_OPERATOR_TOKEN_OBSLAB_KONG": {
+				"description": "Dynatrace operator token for the ActiveGate with these permissions: `activeGateTokenManagement.create`, `entities.read`, `settings.read`, `settings.write`, `DataExport`, `InstallerDownload`"
 		}
 	}
 }

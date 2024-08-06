@@ -1,0 +1,26 @@
+---
+apiVersion: dynatrace.com/v1beta2
+kind: DynaKube
+metadata:
+  name: cluster-CODESPACE_NAME_PLACEHOLDER
+  namespace: dynatrace
+  annotations:
+    feature.dynatrace.com/k8s-app-enabled: "true"
+spec:
+  apiUrl: DT_ENDPOINT_PLACEHOLDER/api
+
+  metadataEnrichment:
+    enabled: true
+
+  activeGate:
+    capabilities:
+      - kubernetes-monitoring
+    
+    # Minimised for codespaces. This is NOT production ready.
+    resources:
+      requests:
+        cpu: 50m
+        memory: 51Mi
+      limits:
+        cpu: 1000m
+        memory: 1.5Gi
