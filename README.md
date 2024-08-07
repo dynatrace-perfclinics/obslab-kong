@@ -61,3 +61,29 @@ kubectl scale deploy/my-otel-demo-flagd --replicas=1
 ## Cleanup
 
 Codespaces are charged when they're running (you have 2000 credits for free). Go to `https://github.com/codespaces` and delete the codespace to prevent charges.
+
+## Developer Info
+
+### Developing Documentation
+
+You will need Python installed.
+
+Then install the dependencies:
+
+```
+pip install -r requirements.txt
+```
+
+Now run doc server locally. This will start a docs server on `http://127.0.0.1:8000` and any changes to the Markdown files in `docs` will be automatically updated.
+
+```
+mkdocs serve
+```
+
+## Building and Uploading Docs to GitHub Pages
+
+When you're ready, just run the following command to automatically build and upload the docs to Github pages and changes will be live.
+
+```
+mkdocs gh-deploy
+```
